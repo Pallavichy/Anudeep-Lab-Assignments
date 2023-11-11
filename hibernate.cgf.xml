@@ -1,0 +1,37 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        
+<hibernate-configuration>
+    <session-factory>
+        
+ <!-- DB -->
+        <!-- Set Driver Name -->
+        <property name = "connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+ 
+        <!-- Set URL -->
+        <property name = "connection.url">jdbc:mysql://localhost:3306/book</property>
+ 
+        <!-- Set User Name -->
+        <property name = "connection.username">root</property>
+ 
+        <!-- Set Password -->
+        <property name = "connection.password">1234</property>
+ 
+ 
+ <!-- Dialect-->
+        <property name = "dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name = "hbm2ddl.auto">create</property>
+        <property name = "show_sql">true</property>
+        <property name = "format_sql">true</property>
+ 
+ <!-- Mapping Config-->
+     <mapping class="com.firstproject.newProject.Book_details"/>
+ 
+ 
+ 
+ 
+    </session-factory>   
+</hibernate-configuration>
+
+<!--hiberate configuration dtd file 3.0 -->
